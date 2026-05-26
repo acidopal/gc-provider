@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.20
+
+- Added DeepSeek v4 Flash and Pro to the seeded Free model catalog with the
+  required `-free` model ids.
+
 ## 0.1.19
 
 - Reworked the public install, update, repair, and uninstall commands around

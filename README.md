@@ -265,6 +265,8 @@ growthcircle/claude-haiku-4-5-20251001-free
 growthcircle/claude-opus-4-6-free
 growthcircle/claude-opus-4-7-free
 growthcircle/claude-sonnet-4-6-free
+growthcircle/deepseek-v4-flash-free
+growthcircle/deepseek-v4-pro-free
 growthcircle/gemini-2.5-flash-free
 growthcircle/gemini-2.5-flash-lite-free
 growthcircle/gemini-2.5-pro-free
