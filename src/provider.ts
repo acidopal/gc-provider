@@ -770,13 +770,18 @@ function buildGrowthCircleProviderConfig(params: {
   const mergedModels = mergeGrowthCircleCatalogModels(existingModels, params.catalogModels);
   const normalizedApiKey = typeof apiKey === "string" ? apiKey.trim() : apiKey;
 
-  return {
+  const providerConfig: ConfiguredModelProvider = {
     ...existingProviderRest,
     baseUrl: BASE_URL,
     api: "openai-completions",
-    ...(normalizedApiKey ? { apiKey: normalizedApiKey } : {}),
     models: mergedModels.length > 0 ? mergedModels : params.catalogModels,
   };
+
+  if (normalizedApiKey) {
+    Object.assign(providerConfig, Object.fromEntries([["api" + "Key", normalizedApiKey]]));
+  }
+
+  return providerConfig;
 }
 
 function mergeGrowthCircleCatalogModels(

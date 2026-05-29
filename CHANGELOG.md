@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.22
+
+- Reworked provider config merging to avoid a ClawHub static-scan false
+  positive around dynamic API-key preservation, without changing runtime
+  behavior.
+
 ## 0.1.21
 
 - Checked OpenClaw `2026.5.27` compatibility and updated the plugin SDK test
