@@ -52,6 +52,7 @@ export const FREE_TEXT_MODEL_IDS = [
   "gemini-3-pro-preview",
   "gemini-3.1-pro-preview",
   "MiniMax-M2.7",
+  "MiniMax-M3",
   "MiniMax-M2.7-highspeed",
 ] as const;
 
@@ -107,6 +108,7 @@ export const PAID_TEXT_MODEL_IDS = [
   "kimi-k2-thinking",
   "kimi-k2.5",
   "MiniMax-M2.7",
+  "MiniMax-M3",
   "MiniMax-M2.7-highspeed",
 ] as const;
 

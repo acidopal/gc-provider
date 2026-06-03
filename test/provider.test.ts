@@ -72,7 +72,7 @@ function modelIdFromRef(ref: string): string {
 
 describe("GrowthCircle.id model catalog", () => {
   it("declares compiled runtime entry metadata for managed package installs", () => {
-    expect(packageJson.version).toBe("0.1.23");
+    expect(packageJson.version).toBe("0.1.24");
     expect(packageJson.openclaw.extensions).toEqual(["./index.ts"]);
     expect(packageJson.openclaw.runtimeExtensions).toEqual(["./dist/index.js"]);
     expect(packageJson.openclaw.compat).toEqual({
@@ -402,6 +402,9 @@ describe("GrowthCircle.id model catalog", () => {
       "MiniMax-M2.7-free",
     );
     expect(freeConfig.models?.providers?.growthcircle?.models?.map((model) => model.id)).toContain(
+      "MiniMax-M3-free",
+    );
+    expect(freeConfig.models?.providers?.growthcircle?.models?.map((model) => model.id)).toContain(
       "deepseek-v4-flash-free",
     );
     expect(freeConfig.models?.providers?.growthcircle?.models?.map((model) => model.id)).toContain(
@@ -409,6 +412,9 @@ describe("GrowthCircle.id model catalog", () => {
     );
     expect(paidConfig.models?.providers?.growthcircle?.models?.map((model) => model.id)).toContain(
       "MiniMax-M2.7",
+    );
+    expect(paidConfig.models?.providers?.growthcircle?.models?.map((model) => model.id)).toContain(
+      "MiniMax-M3",
     );
     expect(paidConfig.models?.providers?.growthcircle?.models?.map((model) => model.id)).toContain(
       "deepseek-v4-flash",

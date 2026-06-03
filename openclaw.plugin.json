@@ -1,7 +1,7 @@
 {
   "id": "gc-provider",
   "name": "GrowthCircle.id Provider",
-  "version": "0.1.23",
+  "version": "0.1.24",
   "description": "OpenAI-compatible GrowthCircle.id model provider for OpenClaw.",
   "extensions": [
     "./index.ts"
@@ -64,6 +64,7 @@
           "growthcircle/gemini-3-pro-preview-free",
           "growthcircle/gemini-3.1-pro-preview-free",
           "growthcircle/MiniMax-M2.7-free",
+          "growthcircle/MiniMax-M3-free",
           "growthcircle/MiniMax-M2.7-highspeed-free"
         ],
         "initialSelections": [
@@ -84,6 +85,7 @@
           "growthcircle/gemini-3-pro-preview-free",
           "growthcircle/gemini-3.1-pro-preview-free",
           "growthcircle/MiniMax-M2.7-free",
+          "growthcircle/MiniMax-M3-free",
           "growthcircle/MiniMax-M2.7-highspeed-free"
         ],
         "message": "GrowthCircle.id free models in /model picker (multi-select)"
@@ -158,6 +160,7 @@
           "growthcircle/kimi-k2-thinking",
           "growthcircle/kimi-k2.5",
           "growthcircle/MiniMax-M2.7",
+          "growthcircle/MiniMax-M3",
           "growthcircle/MiniMax-M2.7-highspeed"
         ],
         "initialSelections": [
@@ -212,6 +215,7 @@
           "growthcircle/kimi-k2-thinking",
           "growthcircle/kimi-k2.5",
           "growthcircle/MiniMax-M2.7",
+          "growthcircle/MiniMax-M3",
           "growthcircle/MiniMax-M2.7-highspeed"
         ],
         "message": "GrowthCircle.id paid models in /model picker (multi-select)"
@@ -1499,6 +1503,30 @@
             }
           },
           {
+            "id": "MiniMax-M3",
+            "name": "MiniMax-M3",
+            "api": "openai-completions",
+            "input": [
+              "text"
+            ],
+            "reasoning": false,
+            "contextWindow": 256000,
+            "maxTokens": 36000,
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "compat": {
+              "supportsDeveloperRole": true,
+              "supportsReasoningEffort": true,
+              "supportsStrictMode": true,
+              "supportsUsageInStreaming": true,
+              "maxTokensField": "max_completion_tokens"
+            }
+          },
+          {
             "id": "MiniMax-M2.7-highspeed",
             "name": "MiniMax-M2.7-highspeed",
             "api": "openai-completions",
@@ -1910,6 +1938,30 @@
           {
             "id": "MiniMax-M2.7-free",
             "name": "MiniMax-M2.7-free",
+            "api": "openai-completions",
+            "input": [
+              "text"
+            ],
+            "reasoning": false,
+            "contextWindow": 256000,
+            "maxTokens": 36000,
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "compat": {
+              "supportsDeveloperRole": true,
+              "supportsReasoningEffort": true,
+              "supportsStrictMode": true,
+              "supportsUsageInStreaming": true,
+              "maxTokensField": "max_completion_tokens"
+            }
+          },
+          {
+            "id": "MiniMax-M3-free",
+            "name": "MiniMax-M3-free",
             "api": "openai-completions",
             "input": [
               "text"

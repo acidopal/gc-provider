@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.24
+
+- Added MiniMax-M3 to the seeded Free and Paid model catalogs.
+
 ## 0.1.23
 
 - Checked OpenClaw `2026.5.28` compatibility and updated the plugin SDK test

@@ -274,6 +274,7 @@ growthcircle/gemini-3-flash-preview-free
 growthcircle/gemini-3-pro-preview-free
 growthcircle/gemini-3.1-pro-preview-free
 growthcircle/MiniMax-M2.7-free
+growthcircle/MiniMax-M3-free
 growthcircle/MiniMax-M2.7-highspeed-free
 ```
 
@@ -331,6 +332,7 @@ growthcircle/kimi-k2-instruct
 growthcircle/kimi-k2-thinking
 growthcircle/kimi-k2.5
 growthcircle/MiniMax-M2.7
+growthcircle/MiniMax-M3
 growthcircle/MiniMax-M2.7-highspeed
 ```
 
