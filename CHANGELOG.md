@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.25
+
+- Checked OpenClaw `2026.6.1` compatibility and updated the plugin SDK test
+  target.
+- Kept the declared OpenClaw install floor at `2026.5.4`; this release expands
+  the tested stable range without dropping existing supported `2026.5.4+`
+  installs.
+- Documented the Node.js `22.19.0+` runtime expectation for the current
+  OpenClaw `latest` release line.
+
 ## 0.1.24
 
 - Added MiniMax-M3 to the seeded Free and Paid model catalogs.

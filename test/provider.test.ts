@@ -72,7 +72,7 @@ function modelIdFromRef(ref: string): string {
 
 describe("GrowthCircle.id model catalog", () => {
   it("declares compiled runtime entry metadata for managed package installs", () => {
-    expect(packageJson.version).toBe("0.1.24");
+    expect(packageJson.version).toBe("0.1.25");
     expect(packageJson.openclaw.extensions).toEqual(["./index.ts"]);
     expect(packageJson.openclaw.runtimeExtensions).toEqual(["./dist/index.js"]);
     expect(packageJson.openclaw.compat).toEqual({
@@ -80,8 +80,8 @@ describe("GrowthCircle.id model catalog", () => {
       minGatewayVersion: "2026.5.4",
     });
     expect(packageJson.openclaw.build).toEqual({
-      openclawVersion: "2026.5.28",
-      pluginSdkVersion: "2026.5.28",
+      openclawVersion: "2026.6.1",
+      pluginSdkVersion: "2026.6.1",
     });
   });
 

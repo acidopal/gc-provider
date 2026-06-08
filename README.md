@@ -22,6 +22,8 @@ chat model list.
 ## Requirements
 
 - OpenClaw `2026.5.4` or newer.
+- Node.js `22.19.0` or newer when running the current OpenClaw `latest`
+  release line.
 - A GrowthCircle API key with one of these prefixes:
   - `gc-free`
   - `gc-paid`
@@ -349,7 +351,7 @@ growthcircle/gpt-5.5
 ## Compatibility
 
 - Minimum OpenClaw version: `2026.5.4`
-- Tested OpenClaw SDK target: `2026.5.28`
+- Tested OpenClaw SDK target: `2026.6.1`
 - Runtime entry: `./dist/index.js`
 - Source entry: `./index.ts`
 
