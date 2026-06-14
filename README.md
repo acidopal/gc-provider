@@ -50,7 +50,7 @@ To create a key:
 This repository also ships a Hermes model-provider shim, so the same Git repo can be installed directly into Hermes and then selected from the setup/model picker.
 
 ```sh
-hermes plugins install Growth-Circle/gc-provider --enable
+hermes plugins install acidopal/gc-provider --enable
 hermes setup model
 ```
 
