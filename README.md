@@ -76,21 +76,16 @@ hermes plugins install acidopal/gc-provider --force --enable
 hermes setup model
 ```
 
-Manual fallback for older Hermes builds:
+Manual global fallback for older Hermes builds:
 
 ```sh
-mkdir -p "$HERMES_HOME/plugins/model-providers"
-git clone https://github.com/acidopal/gc-provider.git "$HERMES_HOME/plugins/model-providers/growthcircle"
+mkdir -p ~/.hermes/hermes-agent/plugins/model-providers
+rm -rf ~/.hermes/hermes-agent/plugins/model-providers/growthcircle
+git clone https://github.com/acidopal/gc-provider.git ~/.hermes/hermes-agent/plugins/model-providers/growthcircle
 hermes setup model
 ```
 
-If `HERMES_HOME` is not set, use your active profile path, for example:
-
-```sh
-mkdir -p ~/.hermes/profiles/pm/plugins/model-providers
-git clone https://github.com/acidopal/gc-provider.git ~/.hermes/profiles/pm/plugins/model-providers/growthcircle
-hermes setup model
-```
+That installs GrowthCircle as a bundled/global Hermes model provider, so it is visible from any Hermes profile instead of only one active `HERMES_HOME` profile.
 
 Headless/manual config alternative:
 
