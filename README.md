@@ -47,19 +47,49 @@ To create a key:
 
 ### Hermes Agent
 
-This repository also ships a Hermes model-provider shim, so the same Git repo can be installed directly into Hermes and then selected from the setup/model picker.
+This repository ships a Hermes `model-provider` plugin for GrowthCircle.id. With a Hermes build that supports model-provider plugin installs, the smooth install flow is:
 
 ```sh
-hermes plugins install acidopal/gc-provider --enable
+hermes plugins install acidopal/gc-provider --force --enable
 hermes setup model
 ```
 
-When prompted for credentials, paste your GrowthCircle API key (`gc-free...`, `gc-paid...`, or `gc-team...`). After that, `GrowthCircle.id` appears in `hermes setup model` / `hermes model`, with the provider id `growthcircle` and model refs like:
+During install, Hermes prompts for `GROWTHCIRCLE_API_KEY`. Paste your GrowthCircle API key (`gc-free...`, `gc-paid...`, or `gc-team...`). After that, `GrowthCircle.id` appears in `hermes setup model` / `hermes model`, with the provider id `growthcircle` and model refs like:
 
 ```text
 growthcircle/gpt-5.5-free
 growthcircle/gpt-5.5
 growthcircle/claude-sonnet-4-6
+```
+
+If you install an older Hermes build and see this error:
+
+```text
+Unknown provider 'growthcircle'
+```
+
+it means Hermes installed the repo as a normal plugin under `plugins/growthcircle`, while model providers must live under `plugins/model-providers/growthcircle`. Update Hermes first, then reinstall:
+
+```sh
+hermes update
+hermes plugins install acidopal/gc-provider --force --enable
+hermes setup model
+```
+
+Manual fallback for older Hermes builds:
+
+```sh
+mkdir -p "$HERMES_HOME/plugins/model-providers"
+git clone https://github.com/acidopal/gc-provider.git "$HERMES_HOME/plugins/model-providers/growthcircle"
+hermes setup model
+```
+
+If `HERMES_HOME` is not set, use your active profile path, for example:
+
+```sh
+mkdir -p ~/.hermes/profiles/pm/plugins/model-providers
+git clone https://github.com/acidopal/gc-provider.git ~/.hermes/profiles/pm/plugins/model-providers/growthcircle
+hermes setup model
 ```
 
 Headless/manual config alternative:
