@@ -1,0 +1,9 @@
+name: growthcircle
+kind: standalone
+version: 0.1.25
+description: GrowthCircle.id OpenAI-compatible model provider for Hermes.
+author: Growth Circle
+requires_env:
+  - GROWTHCIRCLE_API_KEY
+homepage: https://github.com/Growth-Circle/gc-provider
+repository: https://github.com/Growth-Circle/gc-provider

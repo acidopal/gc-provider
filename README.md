@@ -45,6 +45,36 @@ To create a key:
 
 ## Install
 
+### Hermes Agent
+
+This repository also ships a Hermes model-provider shim, so the same Git repo can be installed directly into Hermes and then selected from the setup/model picker.
+
+```sh
+hermes plugins install Growth-Circle/gc-provider --enable
+hermes setup model
+```
+
+When prompted for credentials, paste your GrowthCircle API key (`gc-free...`, `gc-paid...`, or `gc-team...`). After that, `GrowthCircle.id` appears in `hermes setup model` / `hermes model`, with the provider id `growthcircle` and model refs like:
+
+```text
+growthcircle/gpt-5.5-free
+growthcircle/gpt-5.5
+growthcircle/claude-sonnet-4-6
+```
+
+Headless/manual config alternative:
+
+```sh
+GROWTHCIRCLE_API_KEY=<your-growthcircle-key> hermes -z "test" --provider growthcircle -m gpt-5.5-free
+```
+
+Or persist it in Hermes config after installing the plugin:
+
+```sh
+hermes config set model.provider growthcircle
+hermes config set model.default gpt-5.5-free
+```
+
 ### Recommended OpenClaw Command
 
 Use this for a new install, a tracked update, or a stale existing copy. It
